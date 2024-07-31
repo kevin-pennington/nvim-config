@@ -16,4 +16,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 require("vim-config")
 require("lazy").setup("plugins")
-
+function LineNumberColors()
+    vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='#04a5e5', bold=true})
+    vim.api.nvim_set_hl(0, 'LineNr', { fg='#04a5e5', bold=true })
+    vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='#dd7878', bold=false })
+end
+LineNumberColors()
